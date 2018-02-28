@@ -1,0 +1,70 @@
+Como usar o github
+
+Crie uma conta no github, e crie um novo repositório, no meu exemplo, usarei o nome "hello-world". 
+Neste exemplo, a url para meu repositório ficou assim: https://github.com/ivantgm/hello-world
+
+Instalade o git e utilize os seguintes comandos (utilize o email da sua conta no github):
+
+$ git config --global user.name "ivantgm"
+$ git config --global user.email "ivantgm@provedor.com"
+
+No windows será criado um arquivo (texto) em "C:\Users\IVANTGM\.gitconfig
+No linux em ~/.gitconfig
+
+Posicione o prompt de comando na pasta onde deseja "clonar" o projeto:
+
+(exemplo windows)
+cd \projetos\git_testes\
+
+Execute o comando git clone:
+
+git clone https://github.com/ivantgm/hello-world.git
+
+Note que o parametro para o clone é a url com .git no final.
+Será feito o download do repositório, em um novo diretório que será criado, hello-world.
+
+cd \projetos\git_testes\hello-world
+
+Neste diretório teremos o diretório oculto .git, e os demais arquivos controlados do repositório.
+A partir deste momento o repositório está pronto para uso.
+Para visualizar o status, utilize o comando:
+
+git status
+
+Que retornará que não há nada para comitar.
+
+Agora vamos alterar o arquivo de teste, a.txt. Edite-o adicionando uma nova linha, ou alterando da forma que desejar. Após salvá-lo, execute novamente o comando:
+
+git status
+
+A mensagem agora será outra, indicando (em vermelho) que o arquivo a.txt foi modificado.
+Para adicionar o arquivo a.txt para a lista de alterações a comitar, utilize o comando:
+
+git add a.txt
+
+Novamente, o comando status:
+
+git status
+
+A mensagem agora será semelhante a anterior, mas indicando que a.txt (em verde) foi adicionado (branch up to date).
+
+Vamos agora commitar a alteração:
+
+git commit -m "realizei um teste modificando o arquivo a.txt"
+
+Está quase, falta agora enviar as alterações para o github, usando o comando push. A senha será necessária:
+
+git push
+
+Novamente, execute o comando status:
+
+git status
+
+Que retornará que não há nada para comitar.
+
+Este é o uso básico do github.
+
+
+
+
+
